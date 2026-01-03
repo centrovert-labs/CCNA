@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           <div>
             <Link to="/" className="flex flex-col items-start mb-8 group">
               <div className="relative px-0.5">
-                <svg 
-                  className="absolute -top-3 left-0 w-full h-8 text-[#4A90E2] overflow-visible" 
-                  viewBox="0 0 100 20" 
+                <svg
+                  className="absolute -top-3 left-0 w-full h-8 text-[#4A90E2] overflow-visible"
+                  viewBox="0 0 100 20"
                   preserveAspectRatio="none"
                 >
                   <path d="M2,20 Q50,-5 98,20" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-slate-400 mb-8 leading-relaxed text-sm">
-              Excellence in legal advocacy since 2004. Chris Chua & Associates LLC is committed to protecting 
+              Excellence in legal advocacy since 2004. Chris Chua & Associates LLC is committed to protecting
               our clients' interests with unparalleled dedication and expertise in Singapore.
             </p>
             <div className="flex space-x-4">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               <a href="https://www.facebook.com/ccnalawllc/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="https://www.instagram.com/ccna.law/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-slate-900 flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>

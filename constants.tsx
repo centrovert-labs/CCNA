@@ -48,7 +48,7 @@ export const TEAM: TeamMember[] = [
     name: 'Chris Chua',
     role: 'Managing Director',
     bio: 'Chris Chua is a corporate and financial advisory lawyer with more than 20 years of experience. She manages a versatile legal practice and represents clients in myriad different industries.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop', // Selected a professional headshot that matches the persona and provided reference
+    imageUrl: '/images/chris-chua.png', // Updated with client provided image
     qualifications: [
       'LL. B. (Hons), University of Liverpool, England',
       'Barrister-at-Law, Lincoln’s Inn, England & Wales',
