@@ -1,0 +1,8 @@
+{
+  "name": "CCNA Law ",
+  "description": "A lightning-fast, modern React implementation of the CCNA Law firm website, optimized for high article volumes and professional legal aesthetics.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
