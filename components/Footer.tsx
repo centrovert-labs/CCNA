@@ -10,22 +10,14 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo & About */}
           <div>
-            <Link to="/" className="flex flex-col items-start mb-8 group">
-              <div className="relative px-0.5">
-                <svg
-                  className="absolute -top-3 left-0 w-full h-8 text-[#4A90E2] overflow-visible"
-                  viewBox="0 0 100 20"
-                  preserveAspectRatio="none"
-                >
-                  <path d="M2,20 Q50,-5 98,20" fill="none" stroke="currentColor" strokeWidth="1.5" />
-                </svg>
-                <span className="text-xl font-light tracking-[0.2em] text-white serif-font uppercase pt-2 block">
-                  CHRIS CHUA
-                </span>
+            <Link to="/" className="inline-block mb-8 group">
+              <div className="bg-white p-2 rounded-sm inline-block">
+                <img
+                  src="/images/logo.png"
+                  alt="Chris Chua & Associates LLC"
+                  className="h-16 w-auto object-contain"
+                />
               </div>
-              <span className="text-[8px] tracking-[0.3em] text-slate-400 font-medium uppercase mt-1">
-                & ASSOCIATES LLC
-              </span>
             </Link>
             <p className="text-slate-400 mb-8 leading-relaxed text-sm">
               Excellence in legal advocacy since 2004. Chris Chua & Associates LLC is committed to protecting

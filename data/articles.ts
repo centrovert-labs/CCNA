@@ -33,7 +33,7 @@ export const articleData = [
     "publishDate": "15 May 2024",
     "excerpt": "A complete guide for entrepreneurs on Sole Proprietorship, LLP, and Private Limited (Pte Ltd) structures.",
     "content": "Choosing the right legal structure impacts personal liability, tax commitments, and growth potential. A Sole Proprietorship is simplest but carries unlimited personal liability. A Partnership involves shared resources but risks for general partners. The Private Limited Company (Pte Ltd) remains the most popular choice for SMEs, offering limited liability, tax incentives (like the Startup Tax Exemption Scheme), and easier fundraising. For professional service firms, a Limited Liability Partnership (LLP) blends the flexibility of a partnership with the protection of limited liability. Consider liability protection, tax efficiency, and long-term scalability before deciding.",
-    "imageUrl": "https://images.unsplash.com/photo-1454165833767-02654ce5b221?q=80&w=800&auto=format&fit=crop"
+    "imageUrl": "/images/business-entity.png"
   },
   {
     "id": "4",

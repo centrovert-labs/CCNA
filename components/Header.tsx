@@ -27,25 +27,11 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <Link to="/" className="flex flex-col items-center group py-2">
-            <div className="relative px-2">
-              {/* Logo Swoosh */}
-              <svg 
-                className="absolute -top-3 left-0 w-full h-8 text-[#4A90E2] overflow-visible" 
-                viewBox="0 0 100 20" 
-                preserveAspectRatio="none"
-              >
-                <path d="M5,20 Q50,-5 95,20" fill="none" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              <span className="text-2xl font-light tracking-[0.25em] text-[#4A90E2] serif-font uppercase leading-none block pt-2">
-                CHRIS CHUA
-              </span>
-            </div>
-            <span className="text-[9px] tracking-[0.35em] text-slate-500 font-medium uppercase mt-1 leading-none">
-              & ASSOCIATES LLC
-            </span>
-            <span className="text-[7px] tracking-[0.5em] text-slate-400 font-normal uppercase mt-1.5 leading-none">
-              ADVOCATES & SOLICITORS
-            </span>
+            <img
+              src="/images/logo.png"
+              alt="Chris Chua & Associates LLC"
+              className="h-20 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -54,14 +40,13 @@ const Header: React.FC = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-blue-600 ${
-                  isActive(link.path) ? 'text-[#4A90E2] border-b-2 border-[#4A90E2]' : 'text-slate-600'
-                } pb-1`}
+                className={`text-xs font-bold uppercase tracking-widest transition-colors hover:text-blue-600 ${isActive(link.path) ? 'text-[#4A90E2] border-b-2 border-[#4A90E2]' : 'text-slate-600'
+                  } pb-1`}
               >
                 {link.name}
               </Link>
             ))}
-            <a 
+            <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
@@ -92,11 +77,10 @@ const Header: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-4 text-sm font-bold uppercase tracking-widest rounded-md ${
-                  isActive(link.path)
+                className={`block px-3 py-4 text-sm font-bold uppercase tracking-widest rounded-md ${isActive(link.path)
                     ? 'bg-blue-50 text-[#4A90E2]'
                     : 'text-slate-700 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
