@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { PRACTICE_AREAS } from '../constants';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Contact, Building, Building2, Package, HandHelping, TrendingUp } from 'lucide-react';
@@ -13,6 +14,7 @@ const iconMap: Record<string, any> = {
 };
 
 const PracticeAreas: React.FC = () => {
+  const { t } = useTranslation();
   const WHATSAPP_LINK = "https://wa.me/6562227500";
 
   return (
@@ -21,7 +23,7 @@ const PracticeAreas: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950 serif-font uppercase tracking-tight">Our Expertise</h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-            Comprehensive legal solutions for businesses and individuals, 
+            Comprehensive legal solutions for businesses and individuals,
             delivered with precision and dedication.
           </p>
         </div>
@@ -31,7 +33,7 @@ const PracticeAreas: React.FC = () => {
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-[0.15em] mb-12">What We Do</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PRACTICE_AREAS.map((area) => {
             const IconComponent = iconMap[area.icon] || ArrowRight;
@@ -40,12 +42,12 @@ const PracticeAreas: React.FC = () => {
                 <div className="mb-8 text-[#4A90E2]">
                   <IconComponent className="w-12 h-12" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-blue-900 mb-4">{area.title}</h3>
+                <h3 className="text-xl font-bold text-blue-900 mb-4">{t(area.title)}</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed font-light text-sm">
-                  {area.description}
+                  {t(area.description)}
                 </p>
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="mt-auto text-[10px] font-bold text-[#4A90E2] uppercase tracking-[0.2em] hover:text-blue-800 transition-colors"
                 >
                   Learn More
@@ -60,10 +62,10 @@ const PracticeAreas: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 serif-font">Professional Guidance is Just a Click Away</h2>
           <p className="text-slate-400 max-w-xl mx-auto mb-10 leading-relaxed">
-            Every legal challenge requires a unique strategy. Reach out to our 
+            Every legal challenge requires a unique strategy. Reach out to our
             experienced advocates for a confidential discussion.
           </p>
-          <a 
+          <a
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"

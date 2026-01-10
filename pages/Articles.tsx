@@ -1,5 +1,6 @@
 
 import React, { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { MOCK_ARTICLES } from '../constants';
 import { ArticleCategory } from '../types';
 import ArticleCard from '../components/ArticleCard';
@@ -8,6 +9,7 @@ import { Search, Filter, SlidersHorizontal, ChevronLeft, ChevronRight } from 'lu
 const ARTICLES_PER_PAGE = 9;
 
 const Articles: React.FC = () => {
+  const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<ArticleCategory | 'All'>('All');
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,8 +18,8 @@ const Articles: React.FC = () => {
 
   const filteredArticles = useMemo(() => {
     return MOCK_ARTICLES.filter(article => {
-      const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        article.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = activeCategory === 'All' || article.category === activeCategory;
       return matchesSearch && matchesCategory;
     });
@@ -34,10 +36,9 @@ const Articles: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4 serif-font">Resources & Insights</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4 serif-font">{t('articles.header_title')}</h1>
           <p className="text-slate-600 max-w-2xl">
-            Explore our extensive library of legal updates, industry news, and expert analyses. 
-            We maintain thousands of articles to keep our clients informed.
+            {t('articles.header_description')}
           </p>
         </div>
 
@@ -48,7 +49,7 @@ const Articles: React.FC = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="text"
-                placeholder="Search articles by keywords..."
+                placeholder={t('articles.search_placeholder')}
                 className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                 value={searchTerm}
                 onChange={(e) => {
@@ -57,11 +58,11 @@ const Articles: React.FC = () => {
                 }}
               />
             </div>
-            
+
             <div className="flex flex-wrap gap-2">
               <div className="flex items-center mr-4 text-slate-500 font-semibold text-sm">
                 <SlidersHorizontal className="w-4 h-4 mr-2" />
-                Categories:
+                {t('articles.categories')}:
               </div>
               {categories.map((cat) => (
                 <button
@@ -70,11 +71,10 @@ const Articles: React.FC = () => {
                     setActiveCategory(cat as any);
                     setCurrentPage(1);
                   }}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                    activeCategory === cat
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${activeCategory === cat
                       ? 'bg-blue-900 text-white shadow-md'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                  }`}
+                    }`}
                 >
                   {cat}
                 </button>
@@ -95,16 +95,16 @@ const Articles: React.FC = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
               <Filter className="w-8 h-8 text-slate-400" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">No articles found</h3>
-            <p className="text-slate-500 mt-2">Try adjusting your filters or search term.</p>
-            <button 
+            <h3 className="text-xl font-bold text-slate-900">{t('articles.no_results')}</h3>
+            <p className="text-slate-500 mt-2">{t('articles.try_adjusting')}</p>
+            <button
               onClick={() => {
                 setSearchTerm('');
                 setActiveCategory('All');
               }}
               className="mt-6 text-blue-900 font-bold hover:underline"
             >
-              Clear all filters
+              {t('articles.clear_filters')}
             </button>
           </div>
         )}
@@ -124,11 +124,10 @@ const Articles: React.FC = () => {
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}
-                  className={`w-10 h-10 rounded-lg border font-bold text-sm transition-all ${
-                    currentPage === i + 1
+                  className={`w-10 h-10 rounded-lg border font-bold text-sm transition-all ${currentPage === i + 1
                       ? 'bg-blue-900 border-blue-900 text-white shadow-lg'
                       : 'bg-white border-slate-200 text-slate-600 hover:border-blue-400'
-                  }`}
+                    }`}
                 >
                   {i + 1}
                 </button>

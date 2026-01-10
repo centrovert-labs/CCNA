@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, ShieldCheck, Contact, Building, Building2, Package, HandHelping, TrendingUp } from 'lucide-react';
 import { PRACTICE_AREAS, MOCK_ARTICLES } from '../constants';
@@ -14,6 +15,7 @@ const iconMap: Record<string, any> = {
 };
 
 const Home: React.FC = () => {
+  const { t } = useTranslation();
   const featuredArticles = MOCK_ARTICLES.slice(0, 3);
   const WHATSAPP_LINK = "https://wa.me/6562227500";
 
@@ -22,14 +24,14 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-[#0a192f] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img 
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1920&auto=format&fit=crop" 
+          <img
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1920&auto=format&fit=crop"
             className="w-full h-full object-cover"
             alt="Legal Excellence"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/80 to-transparent"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-blue-200 text-[10px] font-bold uppercase tracking-widest mb-6">
@@ -41,11 +43,11 @@ const Home: React.FC = () => {
               <span className="text-[#4A90E2]">Proven Results.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-              Chris Chua & Associates LLC is a premier full-service law firm dedicated to providing 
+              Chris Chua & Associates LLC is a premier full-service law firm dedicated to providing
               exceptional legal services with integrity, diligence, and professionalism.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <a 
+              <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -104,9 +106,9 @@ const Home: React.FC = () => {
                   <div className="mb-6 text-[#4A90E2] group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-10 h-10" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-4">{area.title}</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{t(area.title)}</h3>
                   <p className="text-slate-600 mb-6 leading-relaxed text-sm">
-                    {area.description}
+                    {t(area.description)}
                   </p>
                   <Link to="/practice-areas" className="mt-auto text-[#4A90E2] font-bold text-[10px] inline-flex items-center hover:text-blue-700 transition-colors uppercase tracking-[0.2em]">
                     Learn More <ArrowRight className="w-3 h-3 ml-2" />

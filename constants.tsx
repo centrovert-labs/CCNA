@@ -6,38 +6,38 @@ export const MOCK_ARTICLES = articleData;
 export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: 'personal-law',
-    title: 'Personal Law',
-    description: "Powers of Attorney, Property Ownership – It's your life; be in charge of it.",
+    title: 'practice_areas.personal_law.title',
+    description: 'practice_areas.personal_law.description',
     icon: 'Contact'
   },
   {
     id: 'business-law',
-    title: 'Business Law',
-    description: "You wouldn't build a skyscraper without an architect. Don't build your business without a lawyer.",
+    title: 'practice_areas.business_law.title',
+    description: 'practice_areas.business_law.description',
     icon: 'Building'
   },
   {
     id: 'corporate-law',
-    title: 'Corporate Law',
-    description: "Ready to take on the next challenge? We're with you every step of the way.",
+    title: 'practice_areas.corporate_law.title',
+    description: 'practice_areas.corporate_law.description',
     icon: 'Building2'
   },
   {
     id: 'regulatory-compliance',
-    title: 'Regulatory Compliance',
-    description: "You don't have to worry about your regulatory compliance. We're here for you.",
+    title: 'practice_areas.regulatory_compliance.title',
+    description: 'practice_areas.regulatory_compliance.description',
     icon: 'Package'
   },
   {
     id: 'family-office',
-    title: 'Family Office',
-    description: "Family Office – Plan for the future. Provide for future generations.",
+    title: 'practice_areas.family_office.title',
+    description: 'practice_areas.family_office.description',
     icon: 'HandHelping'
   },
   {
     id: 'estate-planning',
-    title: 'Estate Planning',
-    description: "Estate Planning is about life – The lives of your loved ones.",
+    title: 'practice_areas.estate_planning.title',
+    description: 'practice_areas.estate_planning.description',
     icon: 'TrendingUp'
   }
 ];

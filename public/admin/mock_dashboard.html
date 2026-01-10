@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Dashboard - Preview</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        body {
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Dashboard</h1>
+        <div class="nav">
+            <span>Welcome, admin</span>
+            <a href="mock_dashboard.html">Articles</a>
+            <a href="mock_login.html">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <h2 style="margin: 0;">Articles</h2>
+                <a href="mock_editor.html" class="btn">Add New Article</a>
+            </div>
+
+            <!-- Mock Table -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Status</th>
+                        <th>Publish Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Future of AI in Law</td>
+                        <td>future-of-ai-in-law</td>
+                        <td><span class="status-badge status-published">Published</span></td>
+                        <td>Jan 07, 2026 10:00</td>
+                        <td>
+                            <a href="mock_editor.html" class="btn btn-sm"
+                                style="margin-right:0.5rem; background-color: var(--primary);">Edit</a>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                            <a href="#" class="btn btn-sm"
+                                style="background-color: #6b7280; margin-left: 0.5rem;">View</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Understanding Legal Tech</td>
+                        <td>understanding-legal-tech</td>
+                        <td><span class="status-badge status-draft">Draft</span></td>
+                        <td>-</td>
+                        <td>
+                            <a href="mock_editor.html" class="btn btn-sm"
+                                style="margin-right:0.5rem; background-color: var(--primary);">Edit</a>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5 Tips for Lawyers</td>
+                        <td>5-tips-for-lawyers</td>
+                        <td><span class="status-badge status-scheduled">Scheduled</span></td>
+                        <td>Feb 01, 2026 09:00</td>
+                        <td>
+                            <a href="mock_editor.html" class="btn btn-sm"
+                                style="margin-right:0.5rem; background-color: var(--primary);">Edit</a>
+                            <button class="btn btn-sm btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+{
+    "nav": {
+        "home": "首页",
+        "about": "关于我们",
+        "our_attorneys": "我们的律师",
+        "practice_areas": "业务领域",
+        "articles": "文章/见解",
+        "careers": "职业机会",
+        "contact": "联系我们",
+        "consultation": "咨询",
+        "language_zh": "中文"
+    },
+    "practice_areas": {
+        "personal_law": {
+            "title": "个人法律",
+            "description": "授权书，财产所有权 – 你的生活，由你掌控。"
+        },
+        "business_law": {
+            "title": "商业法律",
+            "description": "你不会在没有建筑师的情况下建造摩天大楼。不要在没有律师的情况下建立你的企业。"
+        },
+        "corporate_law": {
+            "title": "公司法",
+            "description": "准备好迎接下一个挑战了吗？我们一路相伴。"
+        },
+        "regulatory_compliance": {
+            "title": "合规监管",
+            "description": "您不必担心合规问题。我们为您保驾护航。"
+        },
+        "family_office": {
+            "title": "家族办公室",
+            "description": "家族办公室 – 为未来规划。为子孙后代提供保障。"
+        },
+        "estate_planning": {
+            "title": "遗产规划",
+            "description": "遗产规划关乎生命 – 您所爱之人的生活。"
+        }
+    },
+    "footer": {
+        "tagline": "自2004年以来的卓越法律服务。Chris Chua & Associates LLC 致力于以无与伦比的奉献精神和专业知识保护我们在新加坡客户的利益。",
+        "our_firm": "我们的事务所",
+        "specializations": "专业领域",
+        "contact_us": "联系我们",
+        "privacy_policy": "隐私政策",
+        "terms_of_service": "服务条款",
+        "legal_disclaimer": "法律免责声明",
+        "rights_reserved": "保留所有权利。"
+    },
+    "articles": {
+        "header_title": "资源与见解",
+        "header_description": "探索我们丰富的法律更新、行业新闻和专家分析库。我们维护数千篇文章，以确保我们的客户随时了解最新信息。",
+        "search_placeholder": "按关键字搜索文章...",
+        "categories": "分类",
+        "all": "全部",
+        "read_more": "阅读更多",
+        "no_results": "未找到文章",
+        "try_adjusting": "尝试调整您的过滤器或搜索词。",
+        "clear_filters": "清除所有过滤器"
+    }
+}

@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography adjustments for Mandarin */
+body:has([lang="zh"]) {
+    font-size: 17px;
+    /* Slight bump from default 16px */
+    line-height: 1.6;
+}
+
+/* Ensure headings have good weight in Chinese */
+html[lang="zh"] h1,
+html[lang="zh"] h2,
+html[lang="zh"] h3,
+html[lang="zh"] h4 {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    /* Chinese characters benefit from slight spacing */
+}

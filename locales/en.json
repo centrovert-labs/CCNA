@@ -1,0 +1,60 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "our_attorneys": "Our Attorneys",
+        "practice_areas": "Practice Areas",
+        "articles": "Articles",
+        "careers": "Careers",
+        "contact": "Contact",
+        "consultation": "Consultation",
+        "language_zh": "中文"
+    },
+    "practice_areas": {
+        "personal_law": {
+            "title": "Personal Law",
+            "description": "Powers of Attorney, Property Ownership – It's your life; be in charge of it."
+        },
+        "business_law": {
+            "title": "Business Law",
+            "description": "You wouldn't build a skyscraper without an architect. Don't build your business without a lawyer."
+        },
+        "corporate_law": {
+            "title": "Corporate Law",
+            "description": "Ready to take on the next challenge? We're with you every step of the way."
+        },
+        "regulatory_compliance": {
+            "title": "Regulatory Compliance",
+            "description": "You don't have to worry about your regulatory compliance. We're here for you."
+        },
+        "family_office": {
+            "title": "Family Office",
+            "description": "Family Office – Plan for the future. Provide for future generations."
+        },
+        "estate_planning": {
+            "title": "Estate Planning",
+            "description": "Estate Planning is about life – The lives of your loved ones."
+        }
+    },
+    "footer": {
+        "tagline": "Excellence in legal advocacy since 2004. Chris Chua & Associates LLC is committed to protecting our clients' interests with unparalleled dedication and expertise in Singapore.",
+        "our_firm": "Our Firm",
+        "specializations": "Specializations",
+        "contact_us": "Contact Us",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_service": "Terms of Service",
+        "legal_disclaimer": "Legal Disclaimer",
+        "rights_reserved": "All rights reserved."
+    },
+    "articles": {
+        "header_title": "Resources & Insights",
+        "header_description": "Explore our extensive library of legal updates, industry news, and expert analyses. We maintain thousands of articles to keep our clients informed.",
+        "search_placeholder": "Search articles by keywords...",
+        "categories": "Categories",
+        "all": "All",
+        "read_more": "Read More",
+        "no_results": "No articles found",
+        "try_adjusting": "Try adjusting your filters or search term.",
+        "clear_filters": "Clear all filters"
+    }
+}

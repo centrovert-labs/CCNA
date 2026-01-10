@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Editor - Preview</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Summernote Dependencies -->
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>New Article</h1>
+        <div class="nav">
+            <a href="mock_dashboard.html">← Back to Dashboard</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <form
+            onsubmit="event.preventDefault(); alert('This is a mock! on real server this would save.'); window.location.href='mock_dashboard.html';">
+            <div class="editor-layout">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="card">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" value="Future of AI in Law" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Slug (URL)</label>
+                            <input type="text" class="form-control" value="future-of-ai-in-law">
+                        </div>
+                        <div class="form-group">
+                            <label>Content</label>
+                            <textarea id="summernote">
+                                <p>This is how the <b>WYSIWYG</b> editor will look.</p>
+                                <p>You can add images, links, and format text easily.</p>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="card">
+                        <h3>Publish Settings</h3>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="form-control">
+                                <option>Draft</option>
+                                <option>Scheduled</option>
+                                <option selected>Published</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Publish Data/Time</label>
+                            <input type="datetime-local" class="form-control" value="2026-01-07T10:00">
+                        </div>
+                        <button class="btn" style="width: 100%;">Save Article</button>
+                    </div>
+
+                    <div class="card">
+                        <h3>SEO</h3>
+                        <div class="form-group">
+                            <label>Meta Title</label>
+                            <input type="text" class="form-control" value="Future of AI in Law - LegalTech">
+                        </div>
+                        <div class="form-group">
+                            <label>Meta Description</label>
+                            <textarea class="form-control"
+                                style="height: 100px;">Learn how AI is transforming the legal landscape.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Write your article here...',
+            tabsize: 2,
+            height: 400,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    </script>
+</body>
+
+</html>

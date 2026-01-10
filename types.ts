@@ -18,6 +18,9 @@ export interface Article {
   author: string;
   publishDate: string;
   imageUrl: string;
+  titleZh?: string;
+  excerptZh?: string;
+  contentZh?: string;
 }
 
 export interface PracticeArea {
