@@ -10,6 +10,39 @@
         "consultation": "Consultation",
         "language_zh": "中文"
     },
+    "about": {
+        "header": {
+            "title": "About Us",
+            "subtitle_1": "Who We Are",
+            "description_1": "Chris Chua & Associates LLC was established more than 10 years ago by accomplished down-to-earth lawyers because they believed in doing things differently. We offer a sophisticated range of legal services, together with the skill and experience you would expect from a large, international law firm. We think out of the box and provide our clients exceptional service combined with competitive fee rates.",
+            "subtitle_2": "Our Mission",
+            "description_2": "Our mission is to be a key strategic partner. We believe that the law doesn't operate in a vacuum. We understand the complexity and challenges – be it legal, business or personal. With access to a global network of legal, accounting and financial professionals, we ensure that your interests are protected and continue to grow."
+        },
+        "approach": {
+            "title": "Our Approach is Simple",
+            "item_1": "Personal. Honest. Decisive",
+            "item_2": "Frank, insightful analysis & practical solutions",
+            "item_3": "We don't believe in doing anything less"
+        },
+        "leadership": {
+            "title": "Our Leadership",
+            "subtitle": "Dedicated professionals at your service.",
+            "read_more": "Read More"
+        },
+        "modal": {
+            "qualifications": "Qualifications",
+            "memberships": "Memberships",
+            "biography": "Biography",
+            "publications": "Publications",
+            "interested": "Interested in working with",
+            "schedule": "Schedule Consultation"
+        },
+        "cta": {
+            "title": "Ready to take the next step?",
+            "description": "Whether you're starting a business, handling a commercial dispute, or need expert legal advice—our experienced team is here to help. Get in touch with us today and let's discuss how we can support your business goals.",
+            "button": "Get in Touch"
+        }
+    },
     "home": {
         "hero": {
             "badge": "Reliable Legal Partners in Singapore",
