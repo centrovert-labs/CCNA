@@ -121,5 +121,72 @@
         "no_results": "No articles found",
         "try_adjusting": "Try adjusting your filters or search term.",
         "clear_filters": "Clear all filters"
+    },
+    "contact": {
+        "header": {
+            "title": "Contact Us",
+            "description": "Our doors are open to those seeking professional and ethical legal representation in Singapore. Reach out to schedule your initial consultation today."
+        },
+        "info": {
+            "title": "Get in Touch",
+            "description": "Whether you're looking for guidance on a complex corporate matter or personal legal counsel, our team is here to provide clarity and expert advocacy.",
+            "office_location": {
+                "title": "Office Location",
+                "address": "150 Changi Road, #03-05 Guthrie Building, Singapore 419973"
+            },
+            "phone": {
+                "title": "Phone & WhatsApp",
+                "main": "Main: +65 6222 7500",
+                "whatsapp": "WhatsApp: +65 6222 7500"
+            },
+            "email": {
+                "title": "Email Address",
+                "address": "talktous@ccnalaw.com"
+            },
+            "whatsapp_button": "Message us on WhatsApp",
+            "office_hours": {
+                "title": "Office Hours",
+                "weekdays": "Monday - Friday:",
+                "weekdays_time": "9:00 AM - 6:00 PM (SGT)",
+                "weekend": "Saturday & Sunday:",
+                "weekend_status": "Closed / By Appointment"
+            }
+        },
+        "form": {
+            "redirect_title": "Redirecting to WhatsApp",
+            "redirect_desc": "We've opened a direct channel to our legal associates on WhatsApp. If it didn't open automatically, please click the button below.",
+            "redirect_button": "Open WhatsApp Manually",
+            "title": "Send Us a Message",
+            "full_name": "Full Name",
+            "full_name_placeholder": "Enter your name",
+            "email": "Email Address",
+            "email_placeholder": "your@email.com",
+            "subject": "Subject / Practice Area",
+            "options": {
+                "general": "General Inquiry",
+                "civil": "Civil Litigation",
+                "corporate": "Corporate Law",
+                "real_estate": "Real Estate",
+                "family": "Family Law (LPA/Wills)",
+                "other": "Other"
+            },
+            "message": "Your Message",
+            "message_placeholder": "Briefly describe your situation...",
+            "submit_button": "Send WhatsApp Message",
+            "note": "Note: This will open WhatsApp on your device."
+        }
+    },
+    "expertise": {
+        "header": {
+            "title": "Our Expertise",
+            "description": "Comprehensive legal solutions for businesses and individuals, delivered with precision and dedication."
+        },
+        "what_we_do": "What We Do",
+        "learn_more": "Learn More",
+        "cta": {
+            "title": "Professional Guidance is Just a Click Away",
+            "description": "Every legal challenge requires a unique strategy. Reach out to our experienced advocates for a confidential discussion.",
+            "button": "Start a Conversation"
+        }
     }
 }

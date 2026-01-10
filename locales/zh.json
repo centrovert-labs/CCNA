@@ -121,5 +121,72 @@
         "no_results": "未找到文章",
         "try_adjusting": "尝试调整您的过滤器或搜索词。",
         "clear_filters": "清除所有过滤器"
+    },
+    "contact": {
+        "header": {
+            "title": "联系我们",
+            "description": "我们的大门向在新加坡寻求专业和道德法律代理的人敞开。立即联系我们安排初步咨询。"
+        },
+        "info": {
+            "title": "取得联系",
+            "description": "无论您是寻求复杂公司事务的指导还是个人法律咨询，我们的团队都在这里提供清晰和专业的辩护。",
+            "office_location": {
+                "title": "办公地点",
+                "address": "150 Changi Road, #03-05 Guthrie Building, Singapore 419973"
+            },
+            "phone": {
+                "title": "电话 & WhatsApp",
+                "main": "主线: +65 6222 7500",
+                "whatsapp": "WhatsApp: +65 6222 7500"
+            },
+            "email": {
+                "title": "电子邮件地址",
+                "address": "talktous@ccnalaw.com"
+            },
+            "whatsapp_button": "在 WhatsApp 上发消息给我们",
+            "office_hours": {
+                "title": "办公时间",
+                "weekdays": "周一 - 周五:",
+                "weekdays_time": "9:00 AM - 6:00 PM (SGT)",
+                "weekend": "周六 & 周日:",
+                "weekend_status": "休息 / 需预约"
+            }
+        },
+        "form": {
+            "redirect_title": "正在重定向到 WhatsApp",
+            "redirect_desc": "我们已经在 WhatsApp 上为您开通了与我们法律助理的直接沟通渠道。如果没有自动打开，请点击下面的按钮。",
+            "redirect_button": "手动打开 WhatsApp",
+            "title": "给我们发送消息",
+            "full_name": "全名",
+            "full_name_placeholder": "输入您的姓名",
+            "email": "电子邮件地址",
+            "email_placeholder": "your@email.com",
+            "subject": "主题 / 业务领域",
+            "options": {
+                "general": "一般查询",
+                "civil": "民事诉讼",
+                "corporate": "公司法",
+                "real_estate": "房地产",
+                "family": "家庭法 (注持久授权书/遗嘱)",
+                "other": "其他"
+            },
+            "message": "您的留言",
+            "message_placeholder": "简要描述您的情况...",
+            "submit_button": "发送 WhatsApp 消息",
+            "note": "注意：这将在您的设备上打开 WhatsApp。"
+        }
+    },
+    "expertise": {
+        "header": {
+            "title": "我们的专长",
+            "description": "为企业和个人提供全面的法律解决方案，以精准和奉献精神交付。"
+        },
+        "what_we_do": "我们做什么",
+        "learn_more": "了解更多",
+        "cta": {
+            "title": "专业指导仅需点击一下",
+            "description": "每一个法律挑战都需要独特的策略。联系我们经验丰富的律师进行保密讨论。",
+            "button": "开始对话"
+        }
     }
 }

@@ -21,17 +21,16 @@ const PracticeAreas: React.FC = () => {
     <div className="bg-white min-h-screen">
       <section className="bg-slate-50 py-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950 serif-font uppercase tracking-tight">Our Expertise</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-blue-950 serif-font uppercase tracking-tight">{t('expertise.header.title')}</h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-            Comprehensive legal solutions for businesses and individuals,
-            delivered with precision and dedication.
+            {t('expertise.header.description')}
           </p>
         </div>
       </section>
 
       <section className="py-24 max-w-7xl mx-auto px-4">
         <div className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-[0.15em] mb-12">What We Do</h2>
+          <h2 className="text-2xl font-bold text-slate-900 uppercase tracking-[0.15em] mb-12">{t('expertise.what_we_do')}</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -50,7 +49,7 @@ const PracticeAreas: React.FC = () => {
                   to="/contact"
                   className="mt-auto text-[10px] font-bold text-[#4A90E2] uppercase tracking-[0.2em] hover:text-blue-800 transition-colors"
                 >
-                  Learn More
+                  {t('expertise.learn_more')}
                 </Link>
               </div>
             );
@@ -60,10 +59,9 @@ const PracticeAreas: React.FC = () => {
 
       <section className="py-24 bg-[#0a192f] text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 serif-font">Professional Guidance is Just a Click Away</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 serif-font">{t('expertise.cta.title')}</h2>
           <p className="text-slate-400 max-w-xl mx-auto mb-10 leading-relaxed">
-            Every legal challenge requires a unique strategy. Reach out to our
-            experienced advocates for a confidential discussion.
+            {t('expertise.cta.description')}
           </p>
           <a
             href={WHATSAPP_LINK}
@@ -71,7 +69,7 @@ const PracticeAreas: React.FC = () => {
             rel="noopener noreferrer"
             className="bg-[#4A90E2] text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-blue-600 transition-all inline-block shadow-xl"
           >
-            Start a Conversation
+            {t('expertise.cta.button')}
           </a>
         </div>
       </section>

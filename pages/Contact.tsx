@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageSquare } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [submitted, setSubmitted] = useState(false);
   const WHATSAPP_LINK = "https://wa.me/6562227500";
 
@@ -19,10 +21,9 @@ const Contact: React.FC = () => {
     <div className="bg-white min-h-screen">
       <section className="bg-blue-950 py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 serif-font">Contact Us</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 serif-font">{t('contact.header.title')}</h1>
           <p className="text-blue-200 max-w-2xl mx-auto text-lg">
-            Our doors are open to those seeking professional and ethical legal representation in Singapore. 
-            Reach out to schedule your initial consultation today.
+            {t('contact.header.description')}
           </p>
         </div>
       </section>
@@ -33,10 +34,9 @@ const Contact: React.FC = () => {
             {/* Info Column */}
             <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-bold text-blue-950 mb-6 serif-font">Get in Touch</h2>
+                <h2 className="text-3xl font-bold text-blue-950 mb-6 serif-font">{t('contact.info.title')}</h2>
                 <p className="text-slate-600 mb-8 max-w-md">
-                  Whether you're looking for guidance on a complex corporate matter or personal legal counsel, 
-                  our team is here to provide clarity and expert advocacy.
+                  {t('contact.info.description')}
                 </p>
               </div>
 
@@ -46,8 +46,8 @@ const Contact: React.FC = () => {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Office Location</h4>
-                    <p className="text-slate-600">150 Changi Road, #03-05 Guthrie Building, Singapore 419973</p>
+                    <h4 className="font-bold text-slate-900 mb-1">{t('contact.info.office_location.title')}</h4>
+                    <p className="text-slate-600">{t('contact.info.office_location.address')}</p>
                   </div>
                 </div>
 
@@ -56,16 +56,16 @@ const Contact: React.FC = () => {
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Phone & WhatsApp</h4>
-                    <p className="text-slate-600">Main: +65 6222 7500</p>
-                    <a 
+                    <h4 className="font-bold text-slate-900 mb-1">{t('contact.info.phone.title')}</h4>
+                    <p className="text-slate-600">{t('contact.info.phone.main')}</p>
+                    <a
                       href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#4A90E2] font-bold flex items-center mt-1 hover:underline"
                     >
                       <MessageSquare className="w-4 h-4 text-green-600 mr-2" />
-                      WhatsApp: +65 6222 7500
+                      {t('contact.info.phone.whatsapp')}
                     </a>
                   </div>
                 </div>
@@ -75,31 +75,31 @@ const Contact: React.FC = () => {
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 mb-1">Email Address</h4>
-                    <p className="text-slate-600">talktous@ccnalaw.com</p>
+                    <h4 className="font-bold text-slate-900 mb-1">{t('contact.info.email.title')}</h4>
+                    <p className="text-slate-600">{t('contact.info.email.address')}</p>
                   </div>
                 </div>
               </div>
 
               <div className="pt-10">
-                <a 
-                  href={WHATSAPP_LINK} 
-                  target="_blank" 
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-3 bg-green-600 text-white px-8 py-5 rounded-lg font-bold shadow-xl hover:bg-green-700 transition-all uppercase tracking-widest text-sm"
                 >
                   <MessageSquare className="w-6 h-6" />
-                  <span>Message us on WhatsApp</span>
+                  <span>{t('contact.info.whatsapp_button')}</span>
                 </a>
               </div>
 
               <div className="pt-8 border-t border-slate-100">
-                <h4 className="font-bold text-slate-900 mb-4 uppercase tracking-widest text-xs">Office Hours</h4>
+                <h4 className="font-bold text-slate-900 mb-4 uppercase tracking-widest text-xs">{t('contact.info.office_hours.title')}</h4>
                 <div className="grid grid-cols-2 gap-4 text-sm text-slate-600">
-                  <div>Monday - Friday:</div>
-                  <div className="font-bold text-slate-900">9:00 AM - 6:00 PM (SGT)</div>
-                  <div>Saturday & Sunday:</div>
-                  <div className="font-bold text-slate-900 text-red-600">Closed / By Appointment</div>
+                  <div>{t('contact.info.office_hours.weekdays')}</div>
+                  <div className="font-bold text-slate-900">{t('contact.info.office_hours.weekdays_time')}</div>
+                  <div>{t('contact.info.office_hours.weekend')}</div>
+                  <div className="font-bold text-slate-900 text-red-600">{t('contact.info.office_hours.weekend_status')}</div>
                 </div>
               </div>
             </div>
@@ -111,49 +111,48 @@ const Contact: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full text-green-600 mb-6">
                     <CheckCircle className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold text-green-900 mb-4">Redirecting to WhatsApp</h3>
+                  <h3 className="text-2xl font-bold text-green-900 mb-4">{t('contact.form.redirect_title')}</h3>
                   <p className="text-green-800 mb-8">
-                    We've opened a direct channel to our legal associates on WhatsApp. 
-                    If it didn't open automatically, please click the button below.
+                    {t('contact.form.redirect_desc')}
                   </p>
                   <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="bg-green-600 text-white px-8 py-4 rounded-lg font-bold inline-block hover:bg-green-700">
-                    Open WhatsApp Manually
+                    {t('contact.form.redirect_button')}
                   </a>
                 </div>
               ) : (
                 <div className="bg-slate-50 p-10 rounded-2xl border border-slate-200">
-                  <h3 className="text-2xl font-bold text-blue-950 mb-8 serif-font">Send Us a Message</h3>
+                  <h3 className="text-2xl font-bold text-blue-950 mb-8 serif-font">{t('contact.form.title')}</h3>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Full Name</label>
-                        <input required type="text" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder="Enter your name" />
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('contact.form.full_name')}</label>
+                        <input required type="text" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder={t('contact.form.full_name_placeholder')} />
                       </div>
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Email Address</label>
-                        <input required type="email" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder="your@email.com" />
+                        <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('contact.form.email')}</label>
+                        <input required type="email" className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder={t('contact.form.email_placeholder')} />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Subject / Practice Area</label>
+                      <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('contact.form.subject')}</label>
                       <select className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
-                        <option>General Inquiry</option>
-                        <option>Civil Litigation</option>
-                        <option>Corporate Law</option>
-                        <option>Real Estate</option>
-                        <option>Family Law (LPA/Wills)</option>
-                        <option>Other</option>
+                        <option>{t('contact.form.options.general')}</option>
+                        <option>{t('contact.form.options.civil')}</option>
+                        <option>{t('contact.form.options.corporate')}</option>
+                        <option>{t('contact.form.options.real_estate')}</option>
+                        <option>{t('contact.form.options.family')}</option>
+                        <option>{t('contact.form.options.other')}</option>
                       </select>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Your Message</label>
-                      <textarea required rows={5} className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder="Briefly describe your situation..."></textarea>
+                      <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">{t('contact.form.message')}</label>
+                      <textarea required rows={5} className="w-full bg-white border border-slate-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none transition-all" placeholder={t('contact.form.message_placeholder')}></textarea>
                     </div>
                     <button type="submit" className="w-full bg-green-600 text-white py-4 rounded-lg font-bold flex items-center justify-center hover:bg-green-700 transition-all shadow-lg shadow-green-900/20 group">
-                      Send WhatsApp Message <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                      {t('contact.form.submit_button')} <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </button>
                     <p className="text-[10px] text-slate-400 text-center italic mt-4">
-                      Note: This will open WhatsApp on your device.
+                      {t('contact.form.note')}
                     </p>
                   </form>
                 </div>
