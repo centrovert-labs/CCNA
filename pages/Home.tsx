@@ -36,15 +36,14 @@ const Home: React.FC = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-blue-200 text-[10px] font-bold uppercase tracking-widest mb-6">
               <ShieldCheck className="w-4 h-4" />
-              <span>Reliable Legal Partners in Singapore</span>
+              <span>{t('home.hero.badge')}</span>
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight serif-font">
-              Experienced Advocacy. <br />
-              <span className="text-[#4A90E2]">Proven Results.</span>
+              {t('home.hero.title_1')} <br />
+              <span className="text-[#4A90E2]">{t('home.hero.title_2')}</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-              Chris Chua & Associates LLC is a premier full-service law firm dedicated to providing
-              exceptional legal services with integrity, diligence, and professionalism.
+              {t('home.hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
@@ -53,10 +52,10 @@ const Home: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-[#4A90E2] text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-blue-600 transition-all shadow-xl text-center"
               >
-                Free Case Evaluation
+                {t('home.hero.cta_primary')}
               </a>
               <Link to="/practice-areas" className="border border-white/30 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-all text-center">
-                Explore Our Expertise
+                {t('home.hero.cta_secondary')}
               </Link>
             </div>
           </div>
@@ -69,19 +68,19 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-900 mb-1">20+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Years Experience</div>
+              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">{t('home.stats.years')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-900 mb-1">1k+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Successful Cases</div>
+              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">{t('home.stats.cases')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-900 mb-1">15+</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Legal Specialists</div>
+              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">{t('home.stats.specialists')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl font-bold text-blue-900 mb-1">98%</div>
-              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">Client Trust</div>
+              <div className="text-xs text-slate-500 uppercase tracking-widest font-bold">{t('home.stats.trust')}</div>
             </div>
           </div>
         </div>
@@ -91,10 +90,10 @@ const Home: React.FC = () => {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 serif-font uppercase tracking-tight">What We Do</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 serif-font uppercase tracking-tight">{t('home.services.title')}</h2>
             <div className="w-24 h-1 bg-[#4A90E2] mx-auto mb-6"></div>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Strategic counsel and representation across core legal disciplines.
+              {t('home.services.subtitle')}
             </p>
           </div>
 
@@ -111,7 +110,7 @@ const Home: React.FC = () => {
                     {t(area.description)}
                   </p>
                   <Link to="/practice-areas" className="mt-auto text-[#4A90E2] font-bold text-[10px] inline-flex items-center hover:text-blue-700 transition-colors uppercase tracking-[0.2em]">
-                    Learn More <ArrowRight className="w-3 h-3 ml-2" />
+                    {t('home.services.learn_more')} <ArrowRight className="w-3 h-3 ml-2" />
                   </Link>
                 </div>
               );
@@ -125,13 +124,13 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 serif-font">Legal Insights</h2>
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 serif-font">{t('home.insights.title')}</h2>
               <p className="text-slate-600 max-w-xl">
-                Stay updated with the latest legal developments and expert analysis.
+                {t('home.insights.description')}
               </p>
             </div>
             <Link to="/articles" className="mt-6 md:mt-0 inline-flex items-center px-6 py-3 border-2 border-blue-900 text-blue-900 font-bold hover:bg-blue-900 hover:text-white transition-all uppercase tracking-widest text-xs">
-              View All Articles <ArrowRight className="w-5 h-5 ml-2" />
+              {t('home.insights.view_all')} <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
 
@@ -146,19 +145,19 @@ const Home: React.FC = () => {
       {/* Trust Banner */}
       <section className="bg-blue-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8 serif-font">Committed to Justice, Driven by Excellence.</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 serif-font">{t('home.trust.title')}</h2>
           <div className="flex flex-wrap justify-center gap-12">
             <div className="flex items-center text-blue-100 space-x-3">
               <Award className="w-6 h-6 text-[#4A90E2]" />
-              <span className="font-bold uppercase tracking-widest text-xs">Certified Excellence</span>
+              <span className="font-bold uppercase tracking-widest text-xs">{t('home.trust.certified')}</span>
             </div>
             <div className="flex items-center text-blue-100 space-x-3">
               <Users className="w-6 h-6 text-[#4A90E2]" />
-              <span className="font-bold uppercase tracking-widest text-xs">Client-Centric Approach</span>
+              <span className="font-bold uppercase tracking-widest text-xs">{t('home.trust.client_centric')}</span>
             </div>
             <div className="flex items-center text-blue-100 space-x-3">
               <ShieldCheck className="w-6 h-6 text-[#4A90E2]" />
-              <span className="font-bold uppercase tracking-widest text-xs">Trusted Confidentiality</span>
+              <span className="font-bold uppercase tracking-widest text-xs">{t('home.trust.confidentiality')}</span>
             </div>
           </div>
         </div>

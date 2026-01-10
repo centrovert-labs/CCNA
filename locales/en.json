@@ -10,6 +10,38 @@
         "consultation": "Consultation",
         "language_zh": "中文"
     },
+    "home": {
+        "hero": {
+            "badge": "Reliable Legal Partners in Singapore",
+            "title_1": "Experienced Advocacy.",
+            "title_2": "Proven Results.",
+            "description": "Chris Chua & Associates LLC is a premier full-service law firm dedicated to providing exceptional legal services with integrity, diligence, and professionalism.",
+            "cta_primary": "Free Case Evaluation",
+            "cta_secondary": "Explore Our Expertise"
+        },
+        "stats": {
+            "years": "Years Experience",
+            "cases": "Successful Cases",
+            "specialists": "Legal Specialists",
+            "trust": "Client Trust"
+        },
+        "services": {
+            "title": "What We Do",
+            "subtitle": "Strategic counsel and representation across core legal disciplines.",
+            "learn_more": "Learn More"
+        },
+        "insights": {
+            "title": "Legal Insights",
+            "description": "Stay updated with the latest legal developments and expert analysis.",
+            "view_all": "View All Articles"
+        },
+        "trust": {
+            "title": "Committed to Justice, Driven by Excellence.",
+            "certified": "Certified Excellence",
+            "client_centric": "Client-Centric Approach",
+            "confidentiality": "Trusted Confidentiality"
+        }
+    },
     "practice_areas": {
         "personal_law": {
             "title": "Personal Law",

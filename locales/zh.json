@@ -10,6 +10,38 @@
         "consultation": "咨询",
         "language_zh": "中文"
     },
+    "home": {
+        "hero": {
+            "badge": "新加坡值得信赖的合作伙伴",
+            "title_1": "经验丰富的辩护。",
+            "title_2": "行之有效的结果。",
+            "description": "Chris Chua & Associates LLC 是一家一流的全方位服务律师事务所，致力于以正直、勤奋和专业精神提供卓越的法律服务。",
+            "cta_primary": "免费案例评估",
+            "cta_secondary": "探索我们的专长"
+        },
+        "stats": {
+            "years": "年经验",
+            "cases": "成功案例",
+            "specialists": "法律专家",
+            "trust": "客户信任"
+        },
+        "services": {
+            "title": "我们的业务",
+            "subtitle": "核心法律领域的战略咨询和代理。",
+            "learn_more": "了解更多"
+        },
+        "insights": {
+            "title": "法律见解",
+            "description": "随时了解最新的法律发展和专家分析。",
+            "view_all": "查看所有文章"
+        },
+        "trust": {
+            "title": "致力于正义，追求卓越。",
+            "certified": "卓越认证",
+            "client_centric": "以客户为中心",
+            "confidentiality": "值得信赖的保密性"
+        }
+    },
     "practice_areas": {
         "personal_law": {
             "title": "个人法律",
