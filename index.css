@@ -11,6 +11,13 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+.serif-font {
+    font-family: 'Playfair Display', serif;
+}
+
 /* Typography adjustments for Mandarin */
 body:has([lang="zh"]) {
     font-size: 17px;

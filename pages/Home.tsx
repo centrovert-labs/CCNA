@@ -22,44 +22,81 @@ const Home: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center bg-[#0a192f] overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1920&auto=format&fit=crop"
-            className="w-full h-full object-cover"
-            alt="Legal Excellence"
-          />
+      <section
+        className="relative h-screen bg-cover bg-right-center bg-no-repeat overflow-hidden"
+        style={{
+          backgroundImage: 'url("/images/hero_strict_v3.png")',
+          backgroundPosition: 'right center' // Desktop default
+        }}
+      >
+        {/* Seamless cinematic blend overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(90deg, rgba(6, 16, 33, 0.98) 0%, rgba(6, 16, 33, 0.92) 20%, rgba(6, 16, 33, 0.75) 38%, rgba(6, 16, 33, 0.45) 52%, rgba(6, 16, 33, 0.15) 65%, rgba(6, 16, 33, 0.0) 75%)'
+          }}
+        >
+          {/* Mobile gradient override via generic CSS if needed, or we handle via separate div hidden on desktop. 
+              The user provided a specific media query for mobile overlay. 
+              Let's use a style tag or conditional style for mobile if possible, 
+              but for now I'll stick to the desktop one as the base and ensure styling matches. 
+              Actually, I should apply the mobile gradient via a class that changes at md breakpoint.
+          */}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a192f] via-[#0a192f]/80 to-transparent"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-blue-200 text-[10px] font-bold uppercase tracking-widest mb-6">
-              <ShieldCheck className="w-4 h-4" />
-              <span>{t('home.hero.badge')}</span>
-            </div>
-            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6 leading-tight serif-font">
-              {t('home.hero.title_1')} <br />
-              <span className="text-[#4A90E2]">{t('home.hero.title_2')}</span>
+        {/* Mobile Gradient (Only visible on small screens to override/stack) */}
+        <div
+          className="absolute inset-0 md:hidden pointer-events-none"
+          style={{
+            background: 'linear-gradient(180deg, rgba(6,16,33,0.95) 0%, rgba(6,16,33,0.75) 50%, rgba(6,16,33,0.3) 100%)'
+          }}
+        ></div>
+
+        <div className="relative z-10 w-full h-full flex items-center">
+          <div className="max-w-[620px] px-6 py-10 md:p-20 text-white">
+            <span className="inline-block px-[14px] py-[6px] border border-[#78a0ff]/40 rounded-[20px] text-[11px] xl:text-[12px] tracking-[0.6px] mb-6 uppercase">
+              Reliable Legal Partners in Singapore
+            </span>
+
+            <h1 className="serif-font font-medium text-[34px] leading-[1.2] tracking-[-0.2px] md:text-[42px] md:leading-[1.15] lg:text-[48px] xl:text-[56px] xl:leading-[1.12] xl:tracking-[-0.4px] mb-5">
+              Experienced Advocacy.<br />
+              <span className="text-[#6fa3ff] font-semibold block md:inline">Proven Results.</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-              {t('home.hero.description')}
+
+            <p className="text-[14.5px] leading-[1.6] md:text-[14.8px] md:max-w-full lg:text-[15px] lg:max-w-[520px] xl:text-[15.5px] xl:leading-[1.65] opacity-90 mb-8">
+              Chris Chua & Associates LLC is a premier full-service law firm dedicated
+              to providing exceptional legal services with integrity, diligence,
+              and professionalism.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#4A90E2] text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-blue-600 transition-all shadow-xl text-center"
+                className="bg-[#3b82f6] text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-blue-600 transition-colors"
               >
-                {t('home.hero.cta_primary')}
+                FREE CASE EVALUATION
               </a>
-              <Link to="/practice-areas" className="border border-white/30 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-white/10 transition-all text-center">
-                {t('home.hero.cta_secondary')}
+              <Link
+                to="/practice-areas"
+                className="border border-white/40 text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-white/10 transition-colors"
+              >
+                EXPLORE OUR EXPERTISE
               </Link>
             </div>
           </div>
         </div>
+
+        {/* Mobile background position fix via inline style override check not easy in pure inline, 
+            so adding a standard style block for the specific media query behavior requested by user */}
+        <style>{`
+          @media (max-width: 768px) {
+            section {
+              background-position: center !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Stats Section */}
@@ -84,10 +121,10 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Practice Areas */}
-      <section className="py-24 bg-slate-50">
+      < section className="py-24 bg-slate-50" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mb-4 serif-font uppercase tracking-tight">{t('home.services.title')}</h2>
@@ -117,10 +154,10 @@ const Home: React.FC = () => {
             })}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Latest Insights */}
-      <section className="py-24 bg-white">
+      < section className="py-24 bg-white" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
             <div>
@@ -140,10 +177,10 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Trust Banner */}
-      <section className="bg-blue-900 py-16">
+      < section className="bg-blue-900 py-16" >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-8 serif-font">{t('home.trust.title')}</h2>
           <div className="flex flex-wrap justify-center gap-12">
@@ -161,8 +198,8 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </section >
+    </div >
   );
 };
 
