@@ -55,18 +55,16 @@ const Home: React.FC = () => {
         <div className="relative z-10 w-full h-full flex items-center">
           <div className="max-w-[620px] px-6 py-10 md:p-20 text-white">
             <span className="inline-block px-[14px] py-[6px] border border-[#78a0ff]/40 rounded-[20px] text-[11px] xl:text-[12px] tracking-[0.6px] mb-6 uppercase">
-              Reliable Legal Partners in Singapore
+              {t('home.hero.badge')}
             </span>
 
             <h1 className="serif-font font-medium text-[34px] leading-[1.2] tracking-[-0.2px] md:text-[42px] md:leading-[1.15] lg:text-[48px] xl:text-[56px] xl:leading-[1.12] xl:tracking-[-0.4px] mb-5">
-              Experienced Advocacy.<br />
-              <span className="text-[#6fa3ff] font-semibold block md:inline">Proven Results.</span>
+              {t('home.hero.title_1')}<br />
+              <span className="text-[#6fa3ff] font-semibold block md:inline">{t('home.hero.title_2')}</span>
             </h1>
 
             <p className="text-[14.5px] leading-[1.6] md:text-[14.8px] md:max-w-full lg:text-[15px] lg:max-w-[520px] xl:text-[15.5px] xl:leading-[1.65] opacity-90 mb-8">
-              Chris Chua & Associates LLC is a premier full-service law firm dedicated
-              to providing exceptional legal services with integrity, diligence,
-              and professionalism.
+              {t('home.hero.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -74,15 +72,15 @@ const Home: React.FC = () => {
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#3b82f6] text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-blue-600 transition-colors"
+                className="bg-[#3b82f6] text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-blue-600 transition-colors uppercase"
               >
-                FREE CASE EVALUATION
+                {t('home.hero.cta_primary')}
               </a>
               <Link
                 to="/practice-areas"
-                className="border border-white/40 text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-white/10 transition-colors"
+                className="border border-white/40 text-white px-[26px] py-[14px] rounded-md font-semibold text-[14px] text-center hover:bg-white/10 transition-colors uppercase"
               >
-                EXPLORE OUR EXPERTISE
+                {t('home.hero.cta_secondary')}
               </Link>
             </div>
           </div>
